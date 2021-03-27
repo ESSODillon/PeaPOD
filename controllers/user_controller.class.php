@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Author: Kameron Someson
  * Date: 3/26/2021
@@ -6,7 +7,8 @@
  * Description:
  */
 
-class UserController {
+class UserController
+{
     //Variables
     private $index;
     private $register;
@@ -30,49 +32,57 @@ class UserController {
     }
 
     //display the index page
-    public function displayIndex(){
+    public function displayIndex()
+    {
         $view = new Index();
         $view->display();
     }
 
     //display the register page
-    public function registerUser(){
+    public function registerUser()
+    {
         $view = new Register();
         $view->display();
     }
 
     //display the login page
-    public function login(){
+    public function login()
+    {
         $view = new Login();
         $view->display();
     }
 
     //display the verify page
-    public function verify(){
+    public function verifyUser()
+    {
         $view = new Verify();
         $view->display();
     }
 
     //display the logout page
-    public function logout(){
+    public function logout()
+    {
         $view = new Logout();
         $view->display();
     }
 
     //display the reset page
-    public function reset(){
+    public function reset()
+    {
         $view = new Reset();
         $view->display();
     }
 
     //display the reset confirm page
-    public function doReset(){
+    public function doReset()
+    {
         $view = new confirmReset();
         $view->display();
     }
 
     //display error
-    public function error($message){
+    public function error($message)
+    {
         //create an object of the Error class
         $error = new UserError();
 
