@@ -1,26 +1,37 @@
 <?php
-/**
- * Author: Matt Jewell
- * Date: 3/27/2021
- * File: verify.class.php
- * Description:
+
+/*
+ * Author: Dillon Polley
+ * Date: 3/27/21
+ * Name: verify.class.php
+ * Description: A confirmation message after the user has attempted to create an account
  */
-
-include "../../application/database.class.php";
-
-class User
+class Verify extends View
 {
-
-    public $Database;
-
-    public function __construct()
+    public function display()
     {
-        $this->db = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 
-        if (mysqli_connect_errno()) {
-            echo "Error: Could not connect to database.";
-            exit;
-        }
+        //call the header method defined in the parent class to add the header
+        parent::header();
+?>
+        <!-- page specific content starts -->
+        <!-- top row for the page header  -->
+        <div class="top-row">Verify Login</div>
+
+        <!-- middle row -->
+        <div class="middle-row">
+            <h3>Verify Login</h3>
+            <p>Successfully Logged In</p>
+        </div>
+
+        <!-- bottom row for links  -->
+        <div class="bottom-row">
+        </div>
+        <!-- page specific content ends -->
+
+
+<?php
+        //call the footer method defined in the parent class to add the footer
+        parent::footer();
     }
-   //I'm lost and out of time... :(
 }
