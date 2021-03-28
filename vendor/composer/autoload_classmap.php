@@ -12,7 +12,9 @@ return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'Database' => $baseDir . '/application/database.class.php',
     'Index' => $baseDir . '/views/index/index.class.php',
+    'Register' => $baseDir . '/views/index/register.class.php',
     'UserController' => $baseDir . '/controllers/user_controller.class.php',
     'UserError' => $baseDir . '/views/error/user_error.class.php',
+    'UserModel' => $baseDir . '/models/user_model.class.php',
     'View' => $baseDir . '/views/view.class.php',
 );

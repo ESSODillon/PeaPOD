@@ -6,7 +6,7 @@
  * Name: register.class.php
  * Description: A confirmation message after the user has attempted to create an account
  */
-class Register extends View
+class confirmReset extends View
 {
     public function display($message)
     {
@@ -16,11 +16,11 @@ class Register extends View
 ?>
         <!-- page specific content starts -->
         <!-- top row for the page header  -->
-        <div class="top-row">Register</div>
+        <div class="top-row">Confirm Reset</div>
 
         <!-- middle row -->
         <div class="middle-row">
-            <h3>Create an Account</h3>
+            <h3>Confirm Reset</h3>
             <p><?= $message ?></p>
         </div>
 

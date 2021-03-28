@@ -39,10 +39,10 @@ class UserController
     }
 
     //display the register page
-    public function registerUser()
+    public function registerUser($message)
     {
         $view = new Register();
-        $view->display();
+        $view->display($message);
     }
 
     //display the login page
@@ -74,10 +74,10 @@ class UserController
     }
 
     //display the reset confirm page
-    public function doReset()
+    public function doReset($message)
     {
         $view = new confirmReset();
-        $view->display();
+        $view->display($message);
     }
 
     //display error
