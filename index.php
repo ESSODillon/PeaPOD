@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Author: your name
+ * Author: Dillon Polley
  * Date: today's date
  * Name: index.php
  * Description: short description about this file
@@ -15,7 +15,8 @@ $user_controller = new UserController();
 
 //add your code below this line to complete this file
 
-$action = "register";
+$action = "index";
+
 if (isset($_GET['action']) && !(empty($_GET["action"])))
     $action = $_GET['action'];
 

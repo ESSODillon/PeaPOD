@@ -18,20 +18,41 @@ class Register extends View
         <!-- top row for the page header  -->
         <div class="top-row">Register</div>
 
-        <!-- middle row -->
-        <div class="middle-row">
-            <h3>Create an Account</h3>
-            <p><?= $message ?></p>
-        </div>
+        <?php
 
-        <!-- bottom row for links  -->
-        <div class="bottom-row">
-            <span style="float: left">Already have an account? <a href="index.php?action=login">Login</a></span>
-        </div>
-        <!-- page specific content ends -->
+        if ($message == true) {
+        ?>
 
+
+            <!-- middle row -->
+            <div class="middle-row">
+                <h3>Create an Account</h3>
+                <p>Successful account creation</p>
+            </div>
+
+            <!-- bottom row for links  -->
+            <div class="bottom-row">
+                <span style="float: left">Already have an account? <a href="index.php?action=login">Login</a></span>
+            </div>
+        <?php
+        } else {
+        ?>
+
+            <!-- middle row -->
+            <div class="middle-row">
+                <h3>Create an Account</h3>
+                <p>Account creation failed. Please try again.</p>
+            </div>
+
+            <!-- bottom row for links  -->
+            <div class="bottom-row">
+                <span style="float: left">Already have an account? <a href="index.php?action=login">Login</a></span>
+            </div>
+
+            <!-- page specific content ends -->
 
 <?php
+        }
         //call the footer method defined in the parent class to add the footer
         parent::footer();
     }

@@ -10,25 +10,11 @@
 class UserController
 {
     //Variables
-    private $index;
-    private $register;
-    private $login;
-    private $verify;
-    private $logout;
-    private $reset;
-    private $do_reset;
-    private $error;
+    private $user_model;
 
     public function __construct()
     {
-        $this->index = new Index();
-        $this->register = new Register();
-        $this->login = new Login();
-        $this->verify = new Verify();
-        $this->logout = new Logout();
-        $this->reset = new Reset();
-        $this->do_reset = new confirmReset();
-        $this->error = new UserError();
+        $this->user_model = new UserModel();
     }
 
     //display the index page
@@ -39,8 +25,9 @@ class UserController
     }
 
     //display the register page
-    public function registerUser($message)
+    public function registerUser()
     {
+        $message = $this->user_model->add_user();
         $view = new Register();
         $view->display($message);
     }
@@ -55,15 +42,17 @@ class UserController
     //display the verify page
     public function verifyUser()
     {
+        $message = $this->user_model->verify_user();
         $view = new Verify();
-        $view->display();
+        $view->display($message);
     }
 
     //display the logout page
     public function logout()
     {
+        $message = $this->user_model->logout();
         $view = new Logout();
-        $view->display();
+        $view->display($message);
     }
 
     //display the reset page
@@ -74,8 +63,9 @@ class UserController
     }
 
     //display the reset confirm page
-    public function doReset($message)
+    public function doReset()
     {
+        $message = $this->user_model->reset_password();
         $view = new confirmReset();
         $view->display($message);
     }
@@ -84,9 +74,9 @@ class UserController
     public function error($message)
     {
         //create an object of the Error class
-        $error = new UserError();
+        $view = new UserError();
 
         //display the error page
-        $error->display($message);
+        $view->display($message);
     }
 }

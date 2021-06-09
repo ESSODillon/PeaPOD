@@ -22,13 +22,21 @@ class Login extends View
         <div class="middle-row">
             <h3>Login</h3>
             <p>Please Login below</p>
+
+            <!--Get user login info and post it to the model-->
+            <form action="index.php?action=verify" method="post">
+                <input type="text" name="username" placeholder="Username" required><br>
+                <input type="password" name="password" placeholder="Password" required><br>
+                <input class="button" type="submit" name="submit" placeholder="Login" value="LOGIN">
+            </form>
+
         </div>
 
         <!-- bottom row for links  -->
         <div class="bottom-row">
+            <span style="float: left">Don't have an account? <a href="index.php">Register</a></span>
         </div>
         <!-- page specific content ends -->
-
 
 <?php
         //call the footer method defined in the parent class to add the footer

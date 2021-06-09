@@ -8,7 +8,7 @@
  */
 class confirmReset extends View
 {
-    public function display($message)
+    public function display()
     {
 
         //call the header method defined in the parent class to add the header
@@ -21,7 +21,7 @@ class confirmReset extends View
         <!-- middle row -->
         <div class="middle-row">
             <h3>Confirm Reset</h3>
-            <p><?= $message ?></p>
+            <p>This is an example paragraph</p>
         </div>
 
         <!-- bottom row for links  -->
